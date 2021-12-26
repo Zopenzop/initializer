@@ -2,7 +2,7 @@ const color = 'E01120';
 const fs = require('fs')
 const mongo = require('./mongo.js')
 const DiscordJS = require('discord.js')
-const settingsSchema = require('./schemas/server-settings')
+const settingsSchema = require('./schemas/server_settings-schema')
 const prefixSchema = require('./schemas/prefix-schema.js')
 const commandSchema = require('./schemas/command-schema')
 
