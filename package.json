@@ -1,5 +1,5 @@
 {
-  "name": "initializer",
+  "name": "@zopenzop/initializer",
   "version": "1.0.0",
   "description": "",
   "main": "initializer.js",
