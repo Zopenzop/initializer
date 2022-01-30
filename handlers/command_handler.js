@@ -102,7 +102,11 @@ module.exports = async (client, Discord) => {
 						message.channel.send({ embeds: [client.functions.error("Error")] });
 						console.log(err);
 					} finally {
-						msg.delete();
+						try
+						{
+							msg.delete();
+						}
+						catch(err){}
 					}
 				});
 			} else {
