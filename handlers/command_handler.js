@@ -4,6 +4,7 @@ const { Routes } = require("discord-api-types/v9");
 const fs = require("fs");
 const similar = require("string-similarity");
 const marky = require("marky");
+const path = require("path");
 const { findPrefixes, cmdInfo } = require("../functions.js");
 const devs = ["716895830673719357"];
 const devserver = "810889846364307506";
@@ -16,7 +17,8 @@ module.exports = async (client, Discord) => {
 		.filter((file) => file.endsWith(".js"));
 	console.log(command_files);
 	for (const file of command_files) {
-		const command = require(`../../commands/${file}`);
+		console.log(path.resolve(file));
+		const command = require(`./commands/${file}`);
 		if (command.name && command.description) {
 			count++;
 			if (command.slash == true) {
