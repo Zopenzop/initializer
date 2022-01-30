@@ -18,7 +18,7 @@ const levelingsettingsSchema = mongoose.Schema({
           type: Array,
     required: true,
     }
-  }
+  },
   rewards: {
     type: [Object],
     required: true,
