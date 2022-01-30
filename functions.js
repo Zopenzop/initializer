@@ -1,10 +1,11 @@
 const color = 'E01120';
-const fs = require('fs')
-const mongo = require('./mongo.js')
-const DiscordJS = require('discord.js')
-/*const settingsSchema = require('./schemas/server_settings-schema')*/
+const fs = require('fs');
+const path = require('path');
+const mongo = require('./mongo.js');
+const DiscordJS = require('discord.js');
+const settingsSchema = require('./schemas/server_settings-schema.js');
 const prefixSchema = require('./schemas/prefix-schema.js')
-const commandSchema = require('./schemas/command-schema')
+const commandSchema = require('./schemas/command-schema.js')
 
 module.exports.findPrefixes = async function(guildId){
   let res = [];
