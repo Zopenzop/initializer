@@ -9,7 +9,7 @@ module.exports = {
 
 function loadSchemas() {
     let schem = {};
-    const schema_files = fs.readdirSync("./schemas/")
+    const schema_files = fs.readdirSync(__dirname + "/schemas/")
 	.filter((file) => file.endsWith(".js"));
 
   for(const schema of schema_files){
