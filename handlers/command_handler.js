@@ -17,7 +17,7 @@ module.exports = async (client, Discord) => {
 		.filter((file) => file.endsWith(".js"));
 	console.log(command_files);
 	for (const file of command_files) {
-		console.log(path.resolve("../../index.js"));
+		console.log(path.resolve("../index.js"));
 		const command = require(`./${file}`);
 		if (command.name && command.description) {
 			count++;
