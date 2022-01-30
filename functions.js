@@ -2,7 +2,7 @@ const color = 'E01120';
 const fs = require('fs')
 const mongo = require('./mongo.js')
 const DiscordJS = require('discord.js')
-const settingsSchema = require('./schemas/server_settings-schema')
+/*const settingsSchema = require('./schemas/server_settings-schema')*/
 const prefixSchema = require('./schemas/prefix-schema.js')
 const commandSchema = require('./schemas/command-schema')
 
@@ -175,7 +175,7 @@ module.exports.isColor = function(value) {
     return /^#([A-Fa-f0-9]{6})$/.test(value);
 }
 
-module.exports.staffCheck = async function(client, message){
+/*module.exports.staffCheck = async function(client, message){
   const result = await settingsSchema.findOne({ guildId: message.guild.id })
   if(result!=null && result.staffrole!=null && !message.member.roles.cache.find(r => r.id === result.staffrole)){
     message.channel.send(client.functions.error(`Missing Roles: <@&${message.guild.roles.cache.find(r => r.id === result.staffrole).id}>`))
@@ -184,7 +184,7 @@ module.exports.staffCheck = async function(client, message){
     message.channel.send(client.functions.error(`Staff role hasn't been setup!\n Please setup Staff role by using ` + "`" + '!staff role <role-id>' + "`"))
     return false;
   }
-}
+}*/
 
 module.exports.disabledCheck = async function(client, message){
   const result = await commandSchema.findOne({ guildId: message.guild.id })
@@ -200,14 +200,14 @@ module.exports.channelCheck = async function(client, message){
   }
 }
 
-module.exports.premiumCheck = async function(client, message){
+/*module.exports.premiumCheck = async function(client, message){
   const emoji = client.emojis.cache.get('840823062076063747')
   const result = await settingsSchema.findOne({ guildId: message.guild.id })
   if(result.premium==null || result.premium!=null && result.premium==false){
     message.channel.send(client.functions.premiumEmbed(client))
     return false;
   }
-}
+}*/
 
 module.exports.premiumEmbed = function(client){
   const emoji = client.emojis.cache.get('848912392477212712')
