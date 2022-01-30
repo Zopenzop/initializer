@@ -1,6 +1,6 @@
 //const loadSchemas = require('./functions.js');
-const fs = require('fs')
-
+const fs = require('fs');
+const path = require('path');
 const schemas = loadSchemas();
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
 
 function loadSchemas() {
     let schem = {};
-    const schema_files = fs.readdirSync("./resources/schemas/")
+    const schema_files = fs.readdirSync(path.resolve("./resources/schemas/"))
 	.filter((file) => file.endsWith(".js"));
 
   for(const schema of schema_files){
