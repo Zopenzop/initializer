@@ -16,11 +16,11 @@ module.exports = async (module_name, token, mongo_path) => {
     //console.log(` - http://localhost:${port}`)
   });
 
-  axios.post('https://api.uptimerobot.com/v2/getMonitors', {
+  /*axios.post('https://api.uptimerobot.com/v2/getMonitors', {
     "api_key" : process.env['UpTimeRobot_Key'],
     "search" : `https://Brianna-Module-${module_name.charAt(0)}.abstrusethereal.repl.co/`,
   }).then((response) => {
-    if(response.data.monitors.length == 0) {
+    if(response.data.monitors!=null && response.data.monitors.length == 0) {
       axios.post('https://api.uptimerobot.com/v2/newMonitor', {
         "api_key" : process.env['UpTimeRobot_Key'],
         "type" : '1',
@@ -32,7 +32,7 @@ module.exports = async (module_name, token, mongo_path) => {
     //console.log(response.data.monitors);
   }, (error) => {
     console.log(error);
-  });
+  });*/
 
   const Discord = require('discord.js')
   const { Intents } = require('discord.js')
