@@ -61,8 +61,8 @@ module.exports = async (module_name, token, mongo_path) => {
     client.schemas = client.schemas.schemas;
   })
   
-  client
+  /*client
     .on("debug", console.log)
-    .on("warn", console.log)
+    .on("warn", console.log)*/
   client.login(token);
 }
