@@ -15,9 +15,7 @@ module.exports = async (client, Discord) => {
 	const command_files = fs
 		.readdirSync("./commands/")
 		.filter((file) => file.endsWith(".js"));
-	console.log(command_files);
 	for (const file of command_files) {
-		console.log(path.resolve(`./commands/${file}`));
 		const command = require(path.resolve(`./commands/${file}`));
 		if (command.name && command.description) {
 			count++;
