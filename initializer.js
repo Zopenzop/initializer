@@ -40,7 +40,7 @@ module.exports = async (module_name, token, mongo_path) => {
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_MEMBERS],
 	  partials: ['MESSAGE', , 'GUILD_MEMBER', 'CHANNEL', 'REACTION', 'USER'],
   });
-const Canvas = require('canvas')
+/*const Canvas = require('canvas')
 const {
 	registerFont
 } = require('canvas');
@@ -52,7 +52,7 @@ registerFont('./fonts/Roboto-Medium.ttf', {
 });
 registerFont('./fonts/Roboto-Bold.ttf', {
 	family: 'Roboto-Bold'
-});
+});*/
   client.functions = require('./functions.js');
   const { loading } = require('./functions.js')
   const mongo = require('./mongo.js')
