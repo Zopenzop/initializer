@@ -149,9 +149,8 @@ module.exports = async (client, Discord) => {
 				}
 				if (
 					!cmdinfo.roles.length < 1 &&
-					!cmdinfo.roles.some((x) => interaction.member.roles.cache.find(y => y.id == x))
+					!cmdinfo.roles.some((x) => interaction.member.roles.cache.get(x))
 				) {
-					console.log(interaction.member.roles);
 					return;
 				}
 			}
