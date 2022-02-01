@@ -130,6 +130,7 @@ module.exports = async (client, Discord) => {
 		}
 		const command = client.commands.get(interaction.commandName);
 		if (command) {
+			console.log(command);
 			if (command.devOnly && !devs.includes(interaction.member.id)) {
 				return;
 			}
