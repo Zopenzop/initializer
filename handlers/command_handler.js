@@ -138,7 +138,6 @@ module.exports = async (client, Discord) => {
 				interaction.commandName
 			);
 			if (cmdinfo != null) {
-				console.log(cmdinfo);
 				if (cmdinfo.disabled == true) {
 					return;
 				}
@@ -150,8 +149,9 @@ module.exports = async (client, Discord) => {
 				}
 				if (
 					!cmdinfo.roles.length < 1 &&
-					!cmdinfo.roles.some((x) => interaction.member.roles.cache.get(x))
+					!cmdinfo.roles.some((x) => interaction.member.roles.cache.find(y => y.id == x))
 				) {
+					console.log(interaction.member.roles);
 					return;
 				}
 			}
