@@ -43,13 +43,13 @@ module.exports = async (module_name, token, mongo_path) => {
 const {
 	registerFont
 } = require('canvas');
-registerFont('./node-modules/@zopenzop/initializer/fonts/Roboto-Regular.ttf', {
+registerFont('./node_modules/@zopenzop/initializer/fonts/Roboto-Regular.ttf', {
 	family: 'Roboto'
 });
-registerFont('./node-modules/@zopenzop/initializer/fonts/Roboto-Medium.ttf', {
+registerFont('./node_modules/@zopenzop/initializer/fonts/Roboto-Medium.ttf', {
 	family: 'Roboto-Medium'
 });
-registerFont('./node-modules/@zopenzop/initializer/fonts/Roboto-Bold.ttf', {
+registerFont('./node_modules/@zopenzop/initializer/fonts/Roboto-Bold.ttf', {
 	family: 'Roboto-Bold'
 });
   client.functions = require('./functions.js');
