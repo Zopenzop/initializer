@@ -167,7 +167,7 @@ module.exports = async (client, Discord) => {
 						interaction.reply({ embeds: [client.functions.error("Error")] });
 						console.log(err);
 					}
-		}
+		
 	});
 };
 
