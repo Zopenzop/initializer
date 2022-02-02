@@ -151,6 +151,11 @@ module.exports = async (client, Discord) => {
 					!cmdinfo.roles.length < 1 &&
 					!cmdinfo.roles.some((x) => interaction.member.roles.cache.get(x))
 				) {
+					let temp = cmdinfo.roles;
+					temp.forEach(function(x, i){
+						this[i]="<@&"+x+">";
+					}, temp);
+					interaction.reply({ embeds: [client.functions.error(`Missing Roles: ${temp.join(", ")}`)], ephemeral: true });					
 					return;
 				}
 			}
