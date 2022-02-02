@@ -6,6 +6,7 @@ module.exports = async (mongoPath) => {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
   })
   return mongoose
 }
