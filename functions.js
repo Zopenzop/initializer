@@ -16,7 +16,7 @@ module.exports.findPrefixes = async function(guildId){
         },
       ).lean()
     } finally {
-      res.push({prefix: 't.'})
+      res.push({prefix: 'b!'})
   }
   return res;
 }
