@@ -161,6 +161,7 @@ module.exports = async (client, Discord) => {
 				}
 			}
 			await command.slashExecute(interaction, client, Discord);
+		}
 					} catch (err) {
 						//client.functions.erry(err, message, client);
 						interaction.reply({ embeds: [client.functions.error("Error")] });
