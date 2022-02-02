@@ -116,7 +116,7 @@ module.exports.error = function (error){
     var output = new DiscordJS.MessageEmbed().setTitle("Command Error:");
     output.setDescription(error);
     output.setColor('0x2471a3');
-    output.setFooter('Join our support server! https://discord.gg/MUNgGD5mp7')
+    output.setFooter({text:'Join our support server! <Private until further notice>'})
     return output
 }
 
