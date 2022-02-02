@@ -180,6 +180,11 @@ async function processcmd(command, message, msg, args, client) {
 			!cmdinfo.roles.length < 1 &&
 			!cmdinfo.roles.some((x) => message.member.roles.cache.get(x))
 		) {
+			let temp = cmdinfo.roles;
+			temp.forEach(function(x, i){
+				this[i]="<@&"+x+">";
+			}, temp);
+			message.channel.send({ embeds: [client.functions.error(`Missing Roles: ${temp.join(", ")}`)] });
 			msg.delete();
 			return;
 		}
