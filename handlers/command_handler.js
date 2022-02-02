@@ -184,6 +184,6 @@ async function processcmd(command, message, msg, args, client) {
 			return;
 		}
 	}
-	client.functions.cmd(message, client);
+	try{client.functions.cmd(message, client);} catch(err){}
 	await command.execute(client, message, args, Discord);
 }
