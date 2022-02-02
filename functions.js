@@ -70,6 +70,11 @@ module.exports.sendSlashEmbed = async function (interaction, title, desc, epheme
   await interaction.reply({embeds: [output], ephemeral: ephemeral});
 }
 
+module.exports.editReplyWithSlashEmbed = async function (interaction, title, desc, ephemeral) {
+  var output = new DiscordJS.MessageEmbed().setTitle(title).setDescription(desc).setColor('0x' + color);
+  await interaction.editReply({embeds: [output], components: []});
+}
+
 module.exports.updateWithSlashEmbed = async function (interaction, title, desc, ephemeral) {
   var output = new DiscordJS.MessageEmbed().setTitle(title).setDescription(desc).setColor('0x' + color);
   await interaction.update({embeds: [output], components: []});
