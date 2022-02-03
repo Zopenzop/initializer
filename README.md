@@ -1,4 +1,4 @@
-# **Personal initializer module**
+# **Personal discord.js initializer module**
 
 ## 1. Installation
 
