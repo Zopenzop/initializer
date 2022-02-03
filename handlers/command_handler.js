@@ -7,7 +7,7 @@ const marky = require("marky");
 const path = require("path");
 const { findPrefixes, cmdInfo } = require("../functions.js");
 const devs = ["716895830673719357"];
-const devserver = "810889846364307506";
+const devserver = "921793035610751086";
 const slashCommands = [];
 let count = 0;
 
