@@ -58,6 +58,14 @@ const serversettingsSchema = mongoose.Schema({
     type: [Object],
     required: true,
   },
+  lvlupmsg: {
+    type: [Object],
+    required: true,
+  },  
+  lvlupmsgenabled: {
+    type: Boolean,
+    required: true,
+  },  
   levelbg: {
     type: String,
     required: true,
