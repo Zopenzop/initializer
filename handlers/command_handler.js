@@ -174,13 +174,10 @@ module.exports = async (client, Discord) => {
 async function processcmd(command, message, msg, args, client) {
 	const prefixes = await findPrefixes(message.guildId);
 	const prefix = prefixes.find((x) => message.content.startsWith(x.prefix));
-	console.log(prefixes);
 	if (command.devOnly && !devs.includes(message.author.id)) {
 		return;
 	}
-	const cmdinfo = await cmdInfo(message.guildId, message.content.split(" ")[0].replace(prefix, ""));
-	console.log(cmdinfo);
-	console.log(message.guildId, message.content.split(" ")[0].replace(prefix, ""));
+	const cmdinfo = await cmdInfo(message.guildId, message.content.split(" ")[0].replace(prefix.prefix, ""));
 	if (cmdinfo != null) {
 		if (cmdinfo.disabled == true) {
 			msg.delete();
