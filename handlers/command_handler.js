@@ -194,7 +194,6 @@ async function processcmd(command, message, msg, args, client) {
 			!cmdinfo.roles.length < 1 &&
 			!cmdinfo.roles.some((x) => message.member.roles.cache.get(x))
 		) {
-			console.log('pinged');
 			let temp = cmdinfo.roles;
 			temp.forEach(function(x, i){
 				this[i]="<@&"+x+">";
