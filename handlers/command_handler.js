@@ -180,14 +180,14 @@ async function processcmd(command, message, msg, args, client) {
 	const cmdinfo = await cmdInfo(message.guildId, message.content.split(" ")[0].replace(prefix.prefix, ""));
 	if (cmdinfo != null) {
 		if (cmdinfo.disabled == true) {
-			msg.delete();
+			try{msg.delete();}catch(err){}
 			return;
 		}
 		if (
 			!cmdinfo.channels.length < 1 &&
 			!cmdinfo.channels.includes(message.channel.id)
 		) {
-			msg.delete();
+			try{msg.delete();}catch(err){}
 			return;
 		}
 		if (
@@ -199,7 +199,7 @@ async function processcmd(command, message, msg, args, client) {
 				this[i]="<@&"+x+">";
 			}, temp);
 			message.channel.send({ embeds: [client.functions.error(`Missing Roles: ${temp.join(", ")}`)] });
-			msg.delete();
+			try{msg.delete();}catch(err){}
 			return;
 		}
 	}
