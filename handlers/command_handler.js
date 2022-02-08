@@ -176,8 +176,8 @@ async function processcmd(command, message, msg, args, client) {
 		return;
 	}
 	const cmdinfo = await cmdInfo(message.guildId, message.content.split(" ")[0]);
+	console.log(cmdinfo);
 	if (cmdinfo != null) {
-		console.log(cmdinfo);
 		if (cmdinfo.disabled == true) {
 			msg.delete();
 			return;
