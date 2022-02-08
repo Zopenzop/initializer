@@ -177,6 +177,7 @@ async function processcmd(command, message, msg, args, client) {
 	}
 	const cmdinfo = await cmdInfo(message.guildId, message.content.split(" ")[0]);
 	if (cmdinfo != null) {
+		console.log(cmdinfo);
 		if (cmdinfo.disabled == true) {
 			msg.delete();
 			return;
@@ -192,6 +193,7 @@ async function processcmd(command, message, msg, args, client) {
 			!cmdinfo.roles.length < 1 &&
 			!cmdinfo.roles.some((x) => message.member.roles.cache.get(x))
 		) {
+			console.log('pinged');
 			let temp = cmdinfo.roles;
 			temp.forEach(function(x, i){
 				this[i]="<@&"+x+">";
