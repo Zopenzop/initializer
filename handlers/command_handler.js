@@ -174,6 +174,7 @@ module.exports = async (client, Discord) => {
 async function processcmd(command, message, msg, args, client) {
 	const prefixes = await findPrefixes(message.guildId);
 	const prefix = prefixes.find((x) => message.content.startsWith(x.prefix));
+	console.log(prefixes);
 	if (command.devOnly && !devs.includes(message.author.id)) {
 		return;
 	}
