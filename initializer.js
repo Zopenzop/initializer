@@ -37,7 +37,7 @@ module.exports = async (module_name, token, mongo_path) => {
   const Discord = require('discord.js')
   const { Intents } = require('discord.js')
   const client = new Discord.Client({
-    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_MEMBERS],
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_VOICE_STATES],
 	  partials: ['MESSAGE', , 'GUILD_MEMBER', 'CHANNEL', 'REACTION', 'USER'],
   });
 const {
